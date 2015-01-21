@@ -24,7 +24,7 @@ public class ListSimulator {
 	// Constant: size of the list to test
 	final static int LISTSIZE = 1000;
 	// Constant: number of searches to run on the list in each test
-	final static long NUMQUERIES = 1000000;
+	final static long NUMQUERIES = 10000000;
 
 	// Three different types of test, depending on the initial order of the list
 	// INCREASING: the list is initially organized in order of increasing probability
@@ -199,13 +199,13 @@ public class ListSimulator {
 	 */
 	static public void main(String[] args){
 		// Initialize the three experiments
-		MyNegativeList lRandom = new MyNegativeList(LISTSIZE);		
+		MyFastList lRandom = new MyFastList(LISTSIZE);		
 		ListSimulator tRandom = new ListSimulator(TestType.RANDOM, lRandom);
 		
-		MyNegativeList lUp = new MyNegativeList(LISTSIZE);
+		MyFastList lUp = new MyFastList(LISTSIZE);
 		ListSimulator tUp = new ListSimulator(TestType.INCREASING, lUp);
 		
-		MyNegativeList lDown = new MyNegativeList(LISTSIZE);
+		MyFastList lDown = new MyFastList(LISTSIZE);
 		ListSimulator tDown = new ListSimulator(TestType.DECREASING, lDown);
 
 		// For each of the three experiments, run NUMQERIES searches.
@@ -268,9 +268,9 @@ public class ListSimulator {
 *Total cost decreasing: 0.5057739
 *
 *10m times:
-*Total cost random: 5.2255254
-*Total cost increasing: 5.175604
-*Total cost decreasing: 5.2096434
+*Total cost random: 5.130174
+*Total cost increasing: 5.1400423
+*Total cost decreasing: 5.1573243
 *
 *for does not search (return true for every search):
 *1m times:
