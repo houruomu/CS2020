@@ -199,13 +199,13 @@ public class ListSimulator {
 	 */
 	static public void main(String[] args){
 		// Initialize the three experiments
-		FixedLengthList lRandom = new FixedLengthList(LISTSIZE);		
+		MyNegativeList lRandom = new MyNegativeList(LISTSIZE);		
 		ListSimulator tRandom = new ListSimulator(TestType.RANDOM, lRandom);
 		
-		FixedLengthList lUp = new FixedLengthList(LISTSIZE);
+		MyNegativeList lUp = new MyNegativeList(LISTSIZE);
 		ListSimulator tUp = new ListSimulator(TestType.INCREASING, lUp);
 		
-		FixedLengthList lDown = new FixedLengthList(LISTSIZE);
+		MyNegativeList lDown = new MyNegativeList(LISTSIZE);
 		ListSimulator tDown = new ListSimulator(TestType.DECREASING, lDown);
 
 		// For each of the three experiments, run NUMQERIES searches.
@@ -238,3 +238,49 @@ public class ListSimulator {
 	}
 	
 }
+/**
+*for FixedLengthList:
+*1m times:
+*Total cost random: 0.74622786
+*Total cost increasing: 0.8832747
+*Total cost decreasing: 0.508446
+*
+*10m times:
+*Total cost random: 7.0507236
+*Total cost increasing: 8.917138
+*Total cost decreasing: 5.0845065
+*
+*for MoveToFrontList:
+*1m times:
+*Total cost random: 0.56495583
+*Total cost increasing: 0.52329093
+*Total cost decreasing: 0.519214
+*
+*10m times:
+*Total cost random: 5.2921877
+*Total cost increasing: 5.264562
+*Total cost decreasing: 5.2520294
+*
+*for MyFastList:
+*1m times:
+*Total cost random: 0.5319657
+*Total cost increasing: 0.50231504
+*Total cost decreasing: 0.5057739
+*
+*10m times:
+*Total cost random: 5.2255254
+*Total cost increasing: 5.175604
+*Total cost decreasing: 5.2096434
+*
+*for does not search (return true for every search):
+*1m times:
+*Total cost random: 0.49803188
+*Total cost increasing: 0.48581326
+*Total cost decreasing: 0.48469937
+*
+*10m times:
+*Total cost random: 4.825369
+*Total cost increasing: 4.8604827
+*Total cost decreasing: 4.8390384
+*
+**/

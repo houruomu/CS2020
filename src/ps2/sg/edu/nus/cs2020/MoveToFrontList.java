@@ -19,7 +19,7 @@ public class MoveToFrontList extends FixedLengthList {
     }
     
     // moving to front method
-    protected MoveToFront(int pos){
+    protected void MoveToFront(int pos){
         int elementToFront = m_list[pos];
         for (int i = pos; i > 0 ; i--){
             m_list[i] = m_list[i - 1];
