@@ -1,0 +1,16 @@
+Problem 1.c:
+    MyFastList perform the best, however the difference between MyFastList and MoveToFront list is very little.
+    I think the move-to-front efficacy is similar across different implementations. However, the MoveToFrontList
+    is significantly faster than the FixedLengthList in Decreasing and Random tests, therefore the move-to-front
+    optimization is working.
+    
+Problem 1.d:
+    This implementation helps to improve the speed by only a little if any. It is not a good way to handle
+    searches for non-existing elements.
+    Advantages:
+        easy to come up with, no much change on the original code.
+        works fast if a lot of non-existing searches are performed on a same key
+    Disadvantages:
+        if different non-existing items are going to be searched every time, the list will become super large
+        it will prevent the array from holding negative integers
+        
